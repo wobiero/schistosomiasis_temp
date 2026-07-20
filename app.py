@@ -400,9 +400,9 @@ with cost_exp:
     pzq_unit_cost = st.number_input("PZQ tablet cost (USD)", value=0.08, step=0.01, min_value=0.0, help=HELP_TEXT["cost_pzq"])
     pzq_per_person = st.number_input("Tablets per treatment course", value=6.0, step=1.0, min_value=0.0, help=HELP_TEXT["cost_tablets"])
     delivery_cost = st.number_input("Delivery cost per person treated (USD)", value=0.50, step=0.05, min_value=0.0, help=HELP_TEXT["cost_delivery"])
-    mapping_cost = st.number_input("Mapping / M&E annual cost (USD)", value=5_000.0, min_value=0.0, help=HELP_TEXT["cost_mapping"])
-    training_cost = st.number_input("Training cost per MDA round (USD)", value=3_000.0, min_value=0.0, help=HELP_TEXT["cost_training"])
-    supervision_cost = st.number_input("Supervision cost per MDA round (USD)", value=2_000.0, min_value=0.0, help=HELP_TEXT["cost_supervision"])
+    mapping_cost = st.number_input("Mapping / M&E annual cost (USD)", value=5_000.0, min_value=0.0, step=500.0, help=HELP_TEXT["cost_mapping"])
+    training_cost = st.number_input("Training cost per MDA round (USD)", value=3_000.0, min_value=0.0, step=500.0, help=HELP_TEXT["cost_training"])
+    supervision_cost = st.number_input("Supervision cost per MDA round (USD)", value=2_000.0, min_value=0.0, step=500.0, help=HELP_TEXT["cost_supervision"])
     other_prog_cost = st.number_input("Other annual programme costs (USD)", value=1_000.0, min_value=0.0, step=1_000.0, help=HELP_TEXT["cost_other"])
 
 program_target_pop = int(round(pop_req_mda * float(target_multiplier)))
