@@ -403,7 +403,7 @@ with cost_exp:
     mapping_cost = st.number_input("Mapping / M&E annual cost (USD)", value=5_000.0, min_value=0.0, help=HELP_TEXT["cost_mapping"])
     training_cost = st.number_input("Training cost per MDA round (USD)", value=3_000.0, min_value=0.0, help=HELP_TEXT["cost_training"])
     supervision_cost = st.number_input("Supervision cost per MDA round (USD)", value=2_000.0, min_value=0.0, help=HELP_TEXT["cost_supervision"])
-    other_prog_cost = st.number_input("Other annual programme costs (USD)", value=1_000.0, min_value=0.0, step=1_000, help=HELP_TEXT["cost_other"])
+    other_prog_cost = st.number_input("Other annual programme costs (USD)", value=1_000.0, min_value=0.0, step=1_000.0, help=HELP_TEXT["cost_other"])
 
 program_target_pop = int(round(pop_req_mda * float(target_multiplier)))
 planned_pop_treat = int(round(program_target_pop * (mda_coverage / 100.0)))
